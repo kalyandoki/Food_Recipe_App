@@ -7,9 +7,9 @@ function Home() {
   if (loading) return <div>Loading...</div>;
 
   return (
-    <div className="max-w-6xl mx-auto p-4">
+    <div className="w-full mx-auto p-4">
       {recipeList && recipeList.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {recipeList.map((item, index) => (
             <RecipeItem item={item} key={index} />
           ))}

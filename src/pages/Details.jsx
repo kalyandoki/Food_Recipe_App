@@ -27,12 +27,12 @@ function Details() {
   }, []);
 
   return (
-    <div className="container mx-auto py-10 px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 bg-white shadow-lg rounded-lg items-center justify-center mt-10">
+    <div className="w-full container mx-auto py-10 px-10 grid grid-cols-1 lg:grid-cols-2 gap-12 bg-white shadow-lg rounded-lg items-center justify-center mt-10">
       <div className="relative">
         <img
           src={recipeDetailsData?.recipe.image_url}
           alt={recipeDetailsData?.recipe.title}
-          className="w-full h-80 object-cover rounded-lg shadow-md"
+          className="w-full h-90 object-cover rounded-lg shadow-md"
         />
       </div>
       <div className="flex flex-col justify-center space-y-5">
@@ -42,16 +42,16 @@ function Details() {
         </h1>
 
         {/* Publisher */}
-        <p className="text-lg text-gray-600 font-medium">
+        <p className="text-xl font-bold text-green-900">
           By{" "}
-          <span className="font-semibold text-gray-800">
+          <span className="font-bold text-green-900">
             {recipeDetailsData?.recipe.publisher}
           </span>
         </p>
 
         {/* Ingredients List */}
         <div>
-          <p className="text-xl font-semibold text-gray-700">Ingredients:</p>
+          <p className="text-xl font-semibold text-blue-950">Ingredients:</p>
           <ul className="mt-3 space-y-2 text-gray-600 text-lg">
             {recipeDetailsData?.recipe.ingredients.map((ingredient, index) => (
               <li key={index} className="flex items-center">
@@ -65,7 +65,7 @@ function Details() {
         {/* Save to Favorites Button */}
         <button
           onClick={() => handleAddFavorites(recipeDetailsData?.recipe)}
-          className="self-start bg-green-600 text-white px-5 py-2 rounded-lg font-semibold shadow-md transition-transform transform hover:scale-105 hover:bg-green-700"
+          className="self-start bg-blue-950 text-white px-3 py-2 rounded-lg font-semibold shadow-md transition-transform transform hover:scale-105 hover:bg-green-700"
         >
           Save as Favorite ❤️
         </button>
